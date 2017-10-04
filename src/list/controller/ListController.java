@@ -22,13 +22,14 @@ public class ListController
 		
 		donutList.add(temp); // to here
 		fillTheList();
+		showTheList();
 	}
 	
 	private void showTheList()
 	{
 		for (int index = 0; index < donutList.size(); index++)
 		{
-			display.displayText(donutList.get()); //error need to fix lloooook here 
+			display.displayText(donutList.get(index).toString());
 		}
 	}
 	
