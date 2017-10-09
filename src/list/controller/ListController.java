@@ -28,6 +28,7 @@ public class ListController
 	private void showTheList()
 	{
 		String favorite = "ChocolateFilled";
+		String favorite = "Chocolate Filled";
 		for (int index = 0; index < donutList.size(); index++)
 		{
 			String currentFlavor = donutList.get(index).getFlavor();
@@ -52,9 +53,10 @@ public class ListController
 	}
 	
 	private void fillTheList()
+
 	{
 		Donut jellyFilled = new Donut("Jelly filled");
-		Donut chocolateFilled = new Donut("ChocolateFilled");
+		Donut chocolateFilled = new Donut("Chocolate Filled");
 		Donut strawberryFilled = new Donut("Strawberry Filled");
 		Donut coffeeFilled = new Donut("Coffee Filled");
 		Donut candyFilled = new Donut("Candy Filled");
