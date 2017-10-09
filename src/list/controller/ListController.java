@@ -75,4 +75,9 @@ public class ListController
 		display.displayText(removed.getFlavor() + " was removed from the list");
 		display.displayText("Now it is this big: " + donutList.size());
 		donutList.add(removed);
+		
+		display.displayText("The list is still: " + donutList.size() + " items. ");
+		removed = donutList.set(3,  new Donut());
+		display.displayText( "The donut with flavor " + removed.getFlavor() + " has been removed");
+	}
 }
