@@ -87,23 +87,39 @@ public class ListController
 	{
 		
 		display.displayText("The list is this big: " + donutList.size());
-		
+		// added for each loop to be able to see the change before and added another for to show the after
 		for (Donut donut : donutList)
 		{
 			display.displayText(donut + "");
 		}
+		
 		Donut removed =  donutList.remove(0);
 		display.displayText(removed.getFlavor() + " was removed from the list.");
 		display.displayText("Now it is this big: " + donutList.size());
+		for(Donut donut : donutList)
+		{
+			display.displayText(" " + donut);
+		}
 		donutList.add(removed);
+		
+		
 		
 		display.displayText("Now it is this big: " + donutList.size() + " items.");
 		Donut addDonut = donutList.set(1, new Donut( "banana flavored"));
 		display.displayText("The donut with flavor " + addDonut.getFlavor() + " has been removed.");
+		//addDonut = donutList.set(5, new Donut("rock flavored"));
+		
+		display.displayText("The donut with flavor " + donutList.set(4, removed) + " has been added.");
+		display.displayText("Now it is this big: " + donutList.size() + " items.");
 		
 		for(Donut donut : donutList)
 		{
 			display.displayText(" " + donut);
 		}
+		
+		
+		
+		
+		
 	}
 }
