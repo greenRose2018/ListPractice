@@ -22,12 +22,12 @@ public class ListController
 		
 		//donutList.add(temp); // to here
 		fillTheList();
-		showTheList();
+		changeTheList();
+		//showTheList();
 	}
 	
 	private void showTheList()
 	{
-		String favorite = "ChocolateFilled";
 		String favorite = "Chocolate Filled";
 		for (int index = 0; index < donutList.size(); index++)
 		{
@@ -67,4 +67,12 @@ public class ListController
 		donutList.add(coffeeFilled);
 		donutList.add(candyFilled);
 	}
+
+	private void changeTheList()
+	{
+		display.displayText("The list is this big: " + donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + " was removed from the list");
+		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
 }
