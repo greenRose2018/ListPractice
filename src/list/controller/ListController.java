@@ -123,8 +123,11 @@ public class ListController
 			display.displayText(" " + donut);
 		}
 		
-		
-		
+		// backwardsLoopDemo
+		for (int index = donutList.size() - 1; index >= 0; index -= 1)
+		{
+			display.displayText(donutList.get(index).getFlavor());
+		}
 		
 		
 	}
