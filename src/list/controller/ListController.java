@@ -128,4 +128,15 @@ public class ListController
 		
 		
 	}
+
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList; // added params because the Donut is declared differently many times
+	}
+	
+	public PopupDisplay getDisplay()
+	{
+		return display;
+	}
 }
+
