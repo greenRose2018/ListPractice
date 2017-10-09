@@ -22,7 +22,8 @@ public class ListController
 		
 		//donutList.add(temp); // to here
 		fillTheList();
-		changeTheList();
+		practiceRemoveList();
+		//changeTheList();
 		//showTheList();
 	}
 	
@@ -66,6 +67,7 @@ public class ListController
 		donutList.add(strawberryFilled);
 		donutList.add(coffeeFilled);
 		donutList.add(candyFilled);
+		
 	}
 
 	private void changeTheList()
@@ -79,5 +81,29 @@ public class ListController
 		display.displayText("The list is still: " + donutList.size() + " items. ");
 		removed = donutList.set(3,  new Donut());
 		display.displayText( "The donut with flavor " + removed.getFlavor() + " has been removed");
+	}
+	
+	private void practiceRemoveList()
+	{
+		
+		display.displayText("The list is this big: " + donutList.size());
+		
+		for (Donut donut : donutList)
+		{
+			display.displayText(donut + "");
+		}
+		Donut removed =  donutList.remove(0);
+		display.displayText(removed.getFlavor() + " was removed from the list.");
+		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
+		
+		display.displayText("Now it is this big: " + donutList.size() + " items.");
+		Donut addDonut = donutList.set(1, new Donut( "banana flavored"));
+		display.displayText("The donut with flavor " + addDonut.getFlavor() + " has been removed.");
+		
+		for(Donut donut : donutList)
+		{
+			display.displayText(" " + donut);
+		}
 	}
 }
