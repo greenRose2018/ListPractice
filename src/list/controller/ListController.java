@@ -25,7 +25,7 @@ public class ListController
 		tempList.add("Helllo");
 		tempList.add("lkdflakdjflkadlfkjaldkkflkkj");
 		display.displayText("the longest string in the tmeplist is : " +  maxLength(tempList) + "long.");
-		display.displayText("it is: " + getLongestString(tempList));
+		display.displayText("it is: " + LongestString(tempList));
 		
 		//donutList.add(temp); // to here
 		fillTheList();
