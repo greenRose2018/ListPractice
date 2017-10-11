@@ -19,6 +19,13 @@ public class ListController
 	{
 		//temporarily makes Donut an object
 		//Donut temp = new Donut();
+		ArrayList<String> tempList = new ArrayList<String>();
+		
+		tempList.add("ehhhhhhh");
+		tempList.add("Helllo");
+		tempList.add("lkdflakdjflkadlfkjaldkkflkkj");
+		display.displayText("the longest string in the tmeplist is : " +  maxLength(tempList) + "long.");
+		display.displayText("it is: " + getLongestString(tempList));
 		
 		//donutList.add(temp); // to here
 		fillTheList();
@@ -132,19 +139,21 @@ public class ListController
 		
 	}
 
-	public int maxLength(ArrayList<String> myList)
+	public String LongestString(ArrayList<String> myList)
 	{
 		int max = 0;
+		String longest = "";
 		
 		for (int index = 0; index < myList.size(); index++)
 		{
 			if (max< myList.get(index).length())
 			{
 				max = myList.get(index).length();
+				longest = myList.get(index);
 			}
 		}
 		
-		return max;
+		return longest;
 	}
 	public ArrayList<Donut> getDonutList()
 	{
