@@ -22,9 +22,9 @@ public class ListController
 		ArrayList<String> tempList = new ArrayList<String>();
 		
 		tempList.add("ehhhhhhh");
-		tempList.add("Helllo");
+		tempList.add("Hello");
 		tempList.add("lkdflakdjflkadlfkjaldkkflkkj");
-		display.displayText("the longest string in the tmeplist is : " +  maxLength(tempList) + "long.");
+		display.displayText("the longest string in the tmeplist is : " +  maxLength(tempList) + " long.");
 		display.displayText("it is: " + LongestString(tempList));
 		
 		//donutList.add(temp); // to here
@@ -139,6 +139,21 @@ public class ListController
 		
 	}
 
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for (int index = 0; index < myList.size(); index++)
+		{
+			if (max< myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		
+		return max;
+	}
+	
 	public String LongestString(ArrayList<String> myList)
 	{
 		int max = 0;
