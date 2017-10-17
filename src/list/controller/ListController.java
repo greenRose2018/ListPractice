@@ -24,7 +24,7 @@ public class ListController
 		tempList.add("ehhhhhhh");
 		tempList.add("Hello");
 		tempList.add("lkdflakdjflkadlfkjaldkkflkkj");
-		display.displayText("the longest string in the tmeplist is : " +  maxLength(tempList) + " long.");
+		display.displayText("the longest string in the templist is : " +  maxLength(tempList) + " long.");
 		display.displayText("it is: " + LongestString(tempList));
 		
 		//donutList.add(temp); // to here
@@ -155,7 +155,7 @@ public class ListController
 	}
 	
 	public String LongestString(ArrayList<String> myList)
-	{
+	{ 
 		int max = 0;
 		String longest = "";
 		
@@ -170,6 +170,7 @@ public class ListController
 		
 		return longest;
 	}
+	
 	public ArrayList<Donut> getDonutList()
 	{
 		return (ArrayList<Donut>) donutList; // added params because the Donut is declared differently many times
